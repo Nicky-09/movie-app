@@ -1,0 +1,165 @@
+/* .movie-detail {
+  margin: 20px;
+  padding: 20px;
+} */
+
+.movie-detail {
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+.movie-description {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 20px;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+}
+
+.year {
+  margin-right: 20px;
+}
+
+/* MovieDetail.css */
+
+/* Styles for the movie-detail container */
+
+/* Styles for the movie-heading section */
+.movie-heading {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.movie-heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.year {
+  font-size: 16px;
+  color: #777;
+}
+
+.movie-heading span {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* Styles for the movie-description section */
+/* .movie-description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+.movie-description div {
+  margin-bottom: 20px;
+}
+
+.movie-description img {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.movie-description h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styles for the buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Shimmer animation styles */
+/* Replace this with your Shimmer animation styles from 'Shimmer.js' if necessary */
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -490px 0;
+  }
+  100% {
+    background-position: 490px 0;
+  }
+}
+
+.MenuShimmer {
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  height: 104px;
+  width: 100%;
+}
+
+.tag {
+  display: inline-block;
+  /* padding: 5px 10px; */
+  /* background-color: #007bff; */
+  /* color: #fff; */
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-flex {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.movie-details {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.detail-heading {
+  font-size: 18px;
+  font-weight: bold;
+  /* color: #007bff;  */
+  margin-bottom: 5px;
+}
+
+.detail-data {
+  font-size: 16px;
+  color: #007bff;
+}
+
+/* Style for the horizontal line */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+}
