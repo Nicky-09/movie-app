@@ -7,9 +7,6 @@ import MyListMovies from "./components/MyListMovies";
 import Navbar from "./components/Navbar";
 
 const App = () => {
-  // const match = useRouteMatch();
-  // console.log("Match props:", match);
-
   return (
     <Router>
       <div>

@@ -40,22 +40,6 @@ const MyListMovies = () => {
                 </div>
               </Link>
             </div>
-
-            // <div className="movie-card">
-            //   <Link to={`/detail/${movie.imdbID}`} key={movie.imdbID}>
-            //     <div className="card">
-            //       <img
-            //         src={movie.Poster}
-            //         alt={movie.Title}
-            //         width={170}
-            //         height={200}
-            //       />
-            //       <span>{movie.Title}</span>
-            //       <span>Type: {movie.Type}</span>
-            //       <span>Year: {movie.Year}</span>
-            //     </div>
-            //   </Link>
-            // </div>
           ))}
         </div>
       )}

@@ -7,18 +7,17 @@ import { MenuShimmer } from "./Shimmer";
 const MovieDetail = ({ match }) => {
   const [movie, setMovie] = useState(null);
   const [isInMyList, setIsInMyList] = useState(false);
-  //   console.log({ match });
 
   const { id } = useParams();
-  console.log({ id });
+
   useEffect(() => {
     const apiKey = "7a054141"; // Replace 'YOUR_API_KEY' with your actual API key
     const fetchMovie = async () => {
       const response = await axios.get(
         `https://www.omdbapi.com/?i=${id}&apikey=${apiKey}`
       );
+      console.log("called1");
       setMovie(response.data || null);
-      console.log({ movie });
     };
 
     fetchMovie();
@@ -27,6 +26,7 @@ const MovieDetail = ({ match }) => {
   useEffect(() => {
     // Check if the movie is already in My List
     const isInList = localStorage.getItem(id) === "true";
+    console.log("called2");
     setIsInMyList(isInList);
   }, [id]);
 
