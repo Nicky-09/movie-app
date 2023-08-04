@@ -24,7 +24,7 @@ const MyListMovies = () => {
       ) : (
         <div className="movies-flex">
           {myList.map((movie) => (
-            <div key={movie.imdbID} className="movie-card1">
+            <div key={movie.imdbID} className="movie-card">
               <Link to={`/detail/${movie.imdbID}`} key={movie.imdbID}>
                 <div className="card">
                   <img

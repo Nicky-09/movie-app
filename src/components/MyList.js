@@ -5,17 +5,6 @@ import { Link } from "react-router-dom";
 const MyList = () => {
   const [myList, setMyList] = useState([]);
 
-  useEffect(() => {
-    // Fetch the movies from local storage and set them to state
-    const keys = Object.keys(localStorage);
-    // const movies = Object.keys(localStorage).map((key) => {
-    //   const movieData = localStorage.getItem(key);
-    //   return JSON.parse(movieData);
-    // });
-    // setMyList(keys);
-    // console.log({ keys });
-  }, []);
-
   const handleRemoveFromMyList = (id) => {
     // Remove the movie from local storage and update the state
     localStorage.removeItem(id);
