@@ -1,5 +1,9 @@
 # Movie App
 
+<img width="1430" alt="Screenshot 2023-08-04 at 11 35 58 AM" src="https://github.com/Nicky-09/movie-app/assets/52557829/bd6da222-7a32-45ae-90c8-f496816868d0">
+
+
+
 ## Description
 
 This is a simple movie app built with React.js that allows users to browse a list of movies, view movie details, and save their favorite movies to a personal watchlist.
