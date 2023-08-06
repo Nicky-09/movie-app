@@ -3,12 +3,19 @@ import axios from "axios";
 import "./MovieList.css";
 import MovieCard from "./MovieCard";
 import Shimmer from "./Shimmer";
+import useInfiniteScroll from "./useInfiniteScroll"; // Import the custom hook
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const moviesPerPage = 10;
+
+  const loadMoreMovies = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+
+  // Custom hook to handle infinite scroll
+  const isFetching = useInfiniteScroll(loadMoreMovies);
 
   useEffect(() => {
     fetchMovies();
@@ -22,11 +29,6 @@ const MovieList = () => {
 
     setMovies((prevMovies) => [...prevMovies, ...(response.data.Search || [])]);
     setIsLoading(false);
-  };
-
-  // Function to handle page change
-  const handlePageChange = () => {
-    setCurrentPage((prevPage) => prevPage + 1);
   };
 
   if (isLoading) {
@@ -47,13 +49,7 @@ const MovieList = () => {
           movies.map((movie) => <MovieCard key={movie.imdbID} movie={movie} />)
         )}
       </div>
-
-      {/* Pagination */}
-      {movies.length > 0 && (
-        <div className="pagination">
-          <button onClick={handlePageChange}>Load More</button>
-        </div>
-      )}
+      {isFetching && <p>Loading more movies...</p>}
     </div>
   );
 };
